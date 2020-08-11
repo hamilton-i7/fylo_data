@@ -9,5 +9,16 @@ html {
 }
 
 body {
+    background-image: url(../images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     box-sizing: border-box;
+}
+
+main {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
 }

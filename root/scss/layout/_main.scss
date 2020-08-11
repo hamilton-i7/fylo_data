@@ -1,0 +1,47 @@
+.cta, .infographic {
+    background-color: rgba($color-neutral-2, .1);
+    border-radius: 1.5rem;
+}
+
+.cta {
+    border-top-right-radius: 9rem;
+    column-gap: 1.5rem;
+    display: grid;
+    grid-template-areas: 
+    "logo logo logo"
+    "file folder upload";
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3rem;
+    padding-right: 10rem;
+    row-gap: 3rem;
+    width: 100%;
+
+    &__logo {
+        grid-area: logo;
+    }
+
+    &-icon-box {
+        background-color: $color-neutral-4;
+        border-radius: 1.5rem;
+        display: flex;
+        justify-content: center;
+        padding: 1.2rem;
+
+        &__icon {
+            color: $color-neutral-1;
+            font-size: 3rem;
+        }
+
+        &:nth-child(2) > i {
+            grid-area: file;
+        }
+
+        &:nth-child(3) > i {
+            grid-area: folder;
+        }
+
+        &:nth-child(4) > i {
+            grid-area: upload;
+        }
+    }
+}

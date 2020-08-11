@@ -1,0 +1,94 @@
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(../images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+}
+
+.cta, .infographic {
+  background-color: rgba(132, 135, 148, 0.1);
+  border-radius: 1.5rem;
+}
+
+.cta {
+  border-top-right-radius: 9rem;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "logo logo logo" "file folder upload";
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  padding: 3rem;
+  padding-right: 10rem;
+  row-gap: 3rem;
+  width: 100%;
+}
+
+.cta__logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: logo;
+}
+
+.cta-icon-box {
+  background-color: #0c122c;
+  border-radius: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.2rem;
+}
+
+.cta-icon-box__icon {
+  color: #dddbff;
+  font-size: 3rem;
+}
+
+.cta-icon-box:nth-child(2) > i {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: file;
+}
+
+.cta-icon-box:nth-child(3) > i {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: folder;
+}
+
+.cta-icon-box:nth-child(4) > i {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: upload;
+}

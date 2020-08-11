@@ -8,19 +8,51 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
   
   <title>Frontend Mentor | Fylo data storage component</title>
 
 </head>
 <body>
-
-  You’ve used 815 GB of your storage
-
-  185 GB Left
+  <main>
+    <div class="cta">
+      <img src="images/logo.svg" alt="Fylo logo" class="cta__logo">
   
-  0 GB
-  1000 GB
+      <div class="cta-icon-box">
+        <i class="fas fa-file cta-icon-box__icon"></i>
+      </div>
+      <div class="cta-icon-box">
+        <i class="fas fa-folder cta-icon-box__icon"></i>
+      </div>
+      <div class="cta-icon-box">
+        <i class="fas fa-cloud-upload-alt cta-icon-box__icon"></i>
+      </div>
+    </div>
   
+    <section class="infographic">
+      <div class="infographic-status">
+        <p class="txt">
+          <span class="infographic-status__amount">
+  
+          </span>
+        </p>
+  
+        <div class="infographic-status-bar">
+          <div class="infographic-status-bar__indicator">
+            <div class="infographic-status-bar__endpin"></div>
+          </div>
+        </div>
+  
+        <p class="infographic-status__amount"></p>
+        <p class="infographic-status__amount"></p>
+      </div>
+  
+      <div class="infographic-space">
+        <h2 class="heading-secondary"><span></span></h2>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
 
@@ -29,4 +61,11 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+    You’ve used 815 GB of your storage
+
+  185 GB Left
+  
+  0 GB
+  1000 GB
  -->
