@@ -15,11 +15,17 @@ body {
   background-size: cover;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #f8f8f8;
 }
 
 main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   left: 50%;
   position: absolute;
+  row-gap: 2rem;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -31,8 +37,16 @@ body {
   font-size: 1.4rem;
 }
 
+.heading-secondary {
+  font-size: 4.5rem;
+}
+
+.heading-secondary span {
+  font-size: 1.5rem;
+}
+
 .cta, .infographic {
-  background-color: rgba(132, 135, 148, 0.1);
+  background-color: #1d2c67;
   border-radius: 1.5rem;
 }
 
@@ -45,8 +59,7 @@ body {
       grid-template-areas: "logo logo logo" "file folder upload";
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  padding: 3rem;
-  padding-right: 10rem;
+  padding: 5rem 10rem 5rem 4rem;
   row-gap: 3rem;
   width: 100%;
 }
@@ -56,6 +69,7 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: logo;
+  height: 4.5rem;
 }
 
 .cta-icon-box {
@@ -91,4 +105,127 @@ body {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: upload;
+}
+
+.infographic {
+  padding: 12% 10%;
+  padding-bottom: 18%;
+  position: relative;
+}
+
+.infographic-status {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "heading heading" "bar bar" "beginning end";
+}
+
+.infographic-status .txt {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: heading;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding-bottom: 2rem;
+}
+
+.infographic-status-bar {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(12, 18, 44, 0.7);
+  border-radius: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: bar;
+  height: 2.2rem;
+  padding-left: 1%;
+  width: 100%;
+}
+
+.infographic-status-bar__indicator {
+  background: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+  border-radius: 3rem;
+  height: 70%;
+  padding-right: .3rem;
+  position: relative;
+  width: 72%;
+}
+
+.infographic-status-bar__endpin {
+  background-color: #f8f8f8;
+  border-radius: 50%;
+  height: 72%;
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 6%;
+}
+
+.infographic-status__amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.infographic-status__amount:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: beginning;
+  padding-top: 1.2rem;
+}
+
+.infographic-status__amount:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: end;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  padding-top: 1.2rem;
+}
+
+.infographic-space {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f8f8f8;
+  border-radius: 1.5rem;
+  bottom: -21%;
+  color: #0c122c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 50%;
+  padding: 1.5rem;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 55%;
+  min-height: 5rem;
+}
+
+.infographic-space h2 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.infographic-space h2 span {
+  color: #848794;
+  display: inline-block;
+  letter-spacing: 0.08rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
 }

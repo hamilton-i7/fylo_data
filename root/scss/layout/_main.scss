@@ -1,5 +1,5 @@
 .cta, .infographic {
-    background-color: rgba($color-neutral-2, .1);
+    background-color: $color-neutral-3;
     border-radius: 1.5rem;
 }
 
@@ -11,13 +11,13 @@
     "logo logo logo"
     "file folder upload";
     grid-template-columns: repeat(3, 1fr);
-    padding: 3rem;
-    padding-right: 10rem;
+    padding: 5rem 10rem 5rem 4rem;
     row-gap: 3rem;
     width: 100%;
 
     &__logo {
         grid-area: logo;
+        height: 4.5rem;
     }
 
     &-icon-box {
@@ -42,6 +42,102 @@
 
         &:nth-child(4) > i {
             grid-area: upload;
+        }
+    }
+}
+
+.infographic {
+    padding: 12% 10%;
+    padding-bottom: 18%;
+    position: relative;
+
+    &-status {
+        display: grid;
+        grid-template-areas: 
+        "heading heading"
+        "bar bar"
+        "beginning end";
+
+        & .txt {
+            grid-area: heading;
+            justify-self: center;
+            padding-bottom: 2rem;
+        }
+
+        &-bar {
+            align-items: center;
+            background-color: rgba($color-neutral-4, .7);
+            border-radius: 3rem;
+            display: flex;
+            grid-area: bar;
+            height: 2.2rem;
+            padding-left: 1%;
+            width: 100%;
+
+            &__indicator {
+                background: $color-primary;
+                border-radius: 3rem;
+                height: 70%;
+                padding-right: .3rem;
+                position: relative;
+                width: 72%;
+            }
+
+            &__endpin {
+                background-color: $color-white;
+                border-radius: 50%;
+                height: 72%;
+                position: absolute;
+                right: 2%;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 6%;
+
+            }
+        }
+
+        &__amount {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        &__amount:nth-child(3) {
+            grid-area: beginning;
+            padding-top: 1.2rem;
+        }
+        &__amount:nth-child(4) {
+            grid-area: end;
+            justify-self: end;
+            padding-top: 1.2rem;
+        }
+    }
+
+    &-space {
+        align-items: center;
+        background-color: $color-white;
+        border-radius: 1.5rem;
+        bottom: -21%;
+        color: $color-neutral-4;
+        display: flex;
+        justify-content: center;
+        left: 50%;
+        padding: 1.5rem;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 55%;
+        min-height: 5rem;
+
+        & h2 {
+            align-items: center;
+            display: flex;
+
+            & span {
+                color: $color-neutral-2;
+                display: inline-block;
+                letter-spacing: 0.08rem;
+                margin-left: 1rem;
+                margin-top: 0.5rem;
+            }
         }
     }
 }

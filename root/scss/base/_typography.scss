@@ -2,3 +2,11 @@ body {
     font-family: "Raleway", sans-serif;
     font-size: 1.4rem;
 }
+
+.heading-secondary {
+    font-size: 4.5rem;
+
+    & span {
+        font-size: 1.5rem;
+    }
+}
