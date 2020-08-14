@@ -6,7 +6,15 @@ body {
 .heading-secondary {
     font-size: 4.5rem;
 
+    @media only screen and (max-width: 364px) {
+        font-size: 4rem;
+    }
+
     & span {
         font-size: 1.5rem;
+
+        @media only screen and (max-width: 364px) {
+            font-size: 1.4rem;
+        }
     }
 }

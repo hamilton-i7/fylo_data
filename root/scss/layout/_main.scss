@@ -5,43 +5,38 @@
 
 .cta {
     border-top-right-radius: 9rem;
-    column-gap: 1.5rem;
-    display: grid;
-    grid-template-areas: 
-    "logo logo logo"
-    "file folder upload";
-    grid-template-columns: repeat(3, 1fr);
-    padding: 5rem 10rem 5rem 4rem;
-    row-gap: 3rem;
+    height: 22rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 12%;
     width: 100%;
 
     &__logo {
-        grid-area: logo;
-        height: 4.5rem;
+        width: 52%;
+    }
+
+    &-boxes {
+        display: flex;
+        justify-content: space-between;
+        width: 64%;
+
+        @media only screen and (max-width: 330px) {
+            width: 70%;
+        }
     }
 
     &-icon-box {
         background-color: $color-neutral-4;
-        border-radius: 1.5rem;
+        border-radius: 1rem;
         display: flex;
+        flex-basis: 28%;
         justify-content: center;
-        padding: 1.2rem;
+        padding: 1.3rem 0;
 
         &__icon {
             color: $color-neutral-1;
-            font-size: 3rem;
-        }
-
-        &:nth-child(2) > i {
-            grid-area: file;
-        }
-
-        &:nth-child(3) > i {
-            grid-area: folder;
-        }
-
-        &:nth-child(4) > i {
-            grid-area: upload;
+            font-size: 2.5rem;
         }
     }
 }
@@ -74,6 +69,11 @@
             padding-left: 1%;
             width: 100%;
 
+            @media only screen and (max-width: 364px) {
+                height: 1.8rem;
+                padding-left: 1.5%;
+            }
+
             &__indicator {
                 background: $color-primary;
                 border-radius: 3rem;
@@ -93,12 +93,21 @@
                 transform: translateY(-50%);
                 width: 6%;
 
+                @media only screen and (max-width: 364px) {
+                    right: 1%;
+                    width: 5%;
+                }
+
             }
         }
 
         &__amount {
             font-size: 1.5rem;
             font-weight: 700;
+
+            @media only screen and (max-width: 330px) {
+                font-size: 1.3rem;
+            }
         }
 
         &__amount:nth-child(3) {
@@ -126,6 +135,10 @@
         transform: translateX(-50%);
         width: 55%;
         min-height: 5rem;
+
+        @media only screen and (max-width: 330px) {
+            padding: 1.2rem;
+        }
 
         & h2 {
             align-items: center;
