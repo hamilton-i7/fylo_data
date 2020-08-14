@@ -7,11 +7,18 @@
 
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 
 @media only screen and (max-width: 364px) {
   html {
     font-size: 60%;
+  }
+}
+
+@media only screen and (max-width: 314px) {
+  html {
+    font-size: 52%;
   }
 }
 
@@ -24,18 +31,40 @@ body {
   color: #f8f8f8;
 }
 
+@media only screen and (min-width: 1000px) {
+  body {
+    background: url(../images/bg-desktop.png), #0c122c;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
 main {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   left: 50%;
+  max-width: 35rem;
   position: absolute;
   row-gap: 2rem;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 90%;
+}
+
+@media only screen and (min-width: 1000px) {
+  main {
+    -webkit-column-gap: 2.5rem;
+            column-gap: 2.5rem;
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
+    max-width: none;
+    row-gap: 0;
+    width: 80%;
+  }
 }
 
 body {
@@ -85,6 +114,12 @@ body {
   width: 100%;
 }
 
+@media only screen and (min-width: 1000px) {
+  .cta {
+    height: 21rem;
+  }
+}
+
 .cta__logo {
   width: 52%;
 }
@@ -130,6 +165,16 @@ body {
   position: relative;
 }
 
+@media only screen and (min-width: 1000px) {
+  .infographic {
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    height: 17rem;
+    padding: 8% 10%;
+  }
+}
+
 .infographic-status {
   display: -ms-grid;
   display: grid;
@@ -144,6 +189,13 @@ body {
   -ms-grid-column-align: center;
       justify-self: center;
   padding-bottom: 2rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .infographic-status .txt {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
 }
 
 .infographic-status-bar {
@@ -197,6 +249,13 @@ body {
   .infographic-status-bar__endpin {
     right: 1%;
     width: 5%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .infographic-status-bar__endpin {
+    right: 1%;
+    width: 4%;
   }
 }
 

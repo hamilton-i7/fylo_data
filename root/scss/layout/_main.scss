@@ -12,6 +12,10 @@
     padding-left: 12%;
     width: 100%;
 
+    @media only screen and (min-width: 1000px) {
+        height: 21rem;
+    }
+
     &__logo {
         width: 52%;
     }
@@ -46,6 +50,12 @@
     padding-bottom: 18%;
     position: relative;
 
+    @media only screen and (min-width: 1000px) {
+        align-self: end;
+        height: 17rem;
+        padding: 8% 10%;
+    }
+
     &-status {
         display: grid;
         grid-template-areas: 
@@ -57,6 +67,10 @@
             grid-area: heading;
             justify-self: center;
             padding-bottom: 2rem;
+
+            @media only screen and (min-width: 1000px) {
+                justify-self: start;
+            }
         }
 
         &-bar {
@@ -98,6 +112,10 @@
                     width: 5%;
                 }
 
+                @media only screen and (min-width: 1000px) {
+                    right: 1%;
+                    width: 4%;
+                }
             }
         }
 

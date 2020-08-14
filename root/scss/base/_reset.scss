@@ -6,9 +6,13 @@
 
 html {
     font-size: 62.5%;
+    height: 100%;
 
     @media only screen and (max-width: 364px) {
         font-size: 60%;
+    }
+    @media only screen and (max-width: 314px) {
+        font-size: 52%;
     }
 }
 
@@ -18,15 +22,31 @@ body {
     background-size: cover;
     box-sizing: border-box;
     color: $color-white;
+
+    @media only screen and (min-width: 1000px) {
+        background: url(../images/bg-desktop.png), $color-neutral-4;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 }
 
 main {
     display: grid;
     grid-template-columns: 1fr;
     left: 50%;
+    max-width: 35rem;
     position: absolute;
     row-gap: 2rem;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
+
+    @media only screen and (min-width: 1000px) {
+        column-gap: 2.5rem;
+        grid-template-columns: 40% 60%;
+        max-width: none;
+        row-gap: 0;
+        width: 80%;
+    }
 }
