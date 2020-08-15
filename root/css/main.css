@@ -40,6 +40,13 @@ body {
   }
 }
 
+@media only screen and (orientation: landscape) and (max-width: 1000px) {
+  body {
+    padding-bottom: 12%;
+    padding-top: 5%;
+  }
+}
+
 main {
   display: -ms-grid;
   display: grid;
@@ -64,6 +71,17 @@ main {
     max-width: none;
     row-gap: 0;
     width: 80%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 999px) {
+  main {
+    left: 0;
+    margin: 0 auto;
+    position: initial;
+    top: 0;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
