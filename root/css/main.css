@@ -22,6 +22,18 @@ html {
   }
 }
 
+@media only screen and (min-height: 1000px) and (orientation: portrait) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (min-height: 1300px) and (orientation: portrait) {
+  html {
+    font-size: 100%;
+  }
+}
+
 body {
   background-image: url(../images/bg-mobile.png);
   background-repeat: no-repeat;
@@ -29,10 +41,9 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #f8f8f8;
-  height: 100vh;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
   body {
     background: url(../images/bg-desktop.png), #0c122c;
     background-position: center bottom;
@@ -63,7 +74,7 @@ main {
   width: 90%;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
   main {
     -webkit-column-gap: 2.5rem;
             column-gap: 2.5rem;
@@ -72,6 +83,12 @@ main {
     max-width: none;
     row-gap: 0;
     width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1400px) and (orientation: landscape) {
+  main {
+    width: 65%;
   }
 }
 
@@ -89,6 +106,12 @@ main {
 body {
   font-family: "Raleway", sans-serif;
   font-size: 1.4rem;
+}
+
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
+  body {
+    font-size: 1.8rem;
+  }
 }
 
 .heading-secondary {
