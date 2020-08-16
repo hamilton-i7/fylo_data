@@ -33,6 +33,7 @@
     &-icon-box {
         background-color: $color-neutral-4;
         border-radius: 1rem;
+        cursor: pointer;
         display: flex;
         flex-basis: 28%;
         justify-content: center;
@@ -158,6 +159,15 @@
             padding: 1.2rem;
         }
 
+        @media only screen and (min-width: 1000px) and (orientation: landscape) {
+            bottom: unset;
+            left: unset;
+            right: 2.8rem;
+            top: -4.5rem;
+            transform: none;
+            width: 35%;
+        }
+
         & h2 {
             align-items: center;
             display: flex;
@@ -168,6 +178,22 @@
                 letter-spacing: 0.08rem;
                 margin-left: 1rem;
                 margin-top: 0.5rem;
+            }
+        }
+
+        &::after {
+            display: none;
+
+            @media only screen and (min-width: 1000px) and (orientation: landscape) {
+                display: inline-block;
+                content: "";
+                background-color: $color-white;
+                bottom: -2.4rem;
+                clip-path: polygon(100% 0, 0 0, 100% 100%);
+                height: 50%;
+                position: absolute;
+                right: 0;
+                width: 20%;
             }
         }
     }
