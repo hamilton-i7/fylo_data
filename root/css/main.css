@@ -82,7 +82,7 @@ main {
         grid-template-columns: 40% 60%;
     max-width: none;
     row-gap: 0;
-    width: 80%;
+    width: 70%;
   }
 }
 
